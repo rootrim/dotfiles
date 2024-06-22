@@ -1,3 +1,2 @@
-# Dotfiles
-This is my dotfiles
-you can use it
+# Heeeey!
+Hey mate, welcome to my dotfiles repo
