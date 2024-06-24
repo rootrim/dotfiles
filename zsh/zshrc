@@ -1,3 +1,5 @@
+# Some variables
+
 # Aliasses
 
 alias ls="ls --color"
@@ -6,6 +8,7 @@ alias grep="grep --color=auto"
 alias editconf="nvim ~/.dotfiles/qtile/config.py"
 alias tree="tree -C"
 alias zource="source ~/.zshrc"
+alias la="ls -a"
 
 # Plugins
 
