@@ -7,7 +7,7 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 
-@hook.subscribe.startup_once
+@hook.subscribe.startup
 def autostart():
     script = os.path.expanduser("~/.config/qtile/autostart.sh")
     subprocess.run([script])
@@ -43,9 +43,36 @@ keys = [
     Key([mod], "p", lazy.spawn("rofi -show p -modi p:rofi-power-menu"), ),
     Key([mod], "t", lazy.spawn("rofi -show window"), ),
     Key([mod, "shift"], "s",lazy.spawn("flameshot gui"), ),
-
-
 ]
+
+colors = {
+    "rosewater": "#f5e0dc",
+    "flamingo": "#f2cdcd",
+    "pink": "#f5c2e7",
+    "mauve": "#cba6f7",
+    "red": "#f38ba8",
+    "maroon": "#eba0ac",
+    "peach": "#fab387",
+    "yellow": "#f9e2af",
+    "green": "#a6e3a1",
+    "teal": "#94e2d5",
+    "blue": "#89b4fa",
+    "sky": "#89dceb",
+    "sapphire": "#74c7ec",
+    "lavender": "#b4befe",
+    "text": "#cdd6f4",
+    "subtext1": "#bac2de",
+    "subtext0": "#a6adc8",
+    "overlay2": "#9399b2",
+    "overlay1": "#7f849c",
+    "overlay0": "#6c7086",
+    "surface2": "#585b70",
+    "surface1": "#45475a",
+    "surface0": "#313244",
+    "base": "#1e1e2e",
+    "mantle": "#181825",
+    "crust": "#11111b",
+}
 
 for vt in range(1, 8):
     keys.append(
@@ -79,27 +106,29 @@ for i in groups:
     )
 
 layout_theme = {
+    "border_focus": colors["peach"],
+    "border_normal": colors["teal"],
     "border_width": 3,
     "margin": 10,
-
 }
 
 layouts = [
     layout.MonadTall(**layout_theme),
     layout.Max(**layout_theme),
-    layout.Floating(),
+    layout.Floating(**layout_theme),
 ]
 
 widget_defaults = dict(
     font="Meslo LGM Nerd Font",
     fontsize=12,
     padding=3,
+    background=colors["base"]
 )
 extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        wallpaper=os.path.join(os.path.expanduser("~"), ".dotfiles/wallpapers/02.jpg"),
+        wallpaper=os.path.join(os.path.expanduser("~"), ".dotfiles/wallpapers/tardis.jpg"),
         wallpaper_mode="fill",
     ),
 ]
