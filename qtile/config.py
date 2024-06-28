@@ -99,7 +99,7 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        wallpaper=os.path.join(os.path.expanduser("~"), ".dotfiles/wallpapers/akenowall.jpg"),
+        wallpaper=os.path.join(os.path.expanduser("~"), ".dotfiles/wallpapers/02.jpg"),
         wallpaper_mode="fill",
     ),
 ]
