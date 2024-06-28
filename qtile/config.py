@@ -98,7 +98,10 @@ widget_defaults = dict(
 extension_defaults = widget_defaults.copy()
 
 screens = [
-    Screen(),
+    Screen(
+        wallpaper=os.path.join(os.path.expanduser("~"), ".dotfiles/wallpapers/akenowall.jpg"),
+        wallpaper_mode="fill",
+    ),
 ]
 
 mouse = [
