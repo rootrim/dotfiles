@@ -40,6 +40,7 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), ),
     Key([mod, "control"], "q", lazy.shutdown(), ),
     Key([mod], "r", lazy.spawn("rofi -show drun"), ),
+    Key([mod], "d", lazy.spawn("rofi -show run"), ),
     Key([mod], "p", lazy.spawn("rofi -show p -modi p:rofi-power-menu"), ),
     Key([mod], "t", lazy.spawn("rofi -show window"), ),
     Key([mod, "shift"], "s",lazy.spawn("flameshot gui"), ),
@@ -106,8 +107,8 @@ for i in groups:
     )
 
 layout_theme = {
-    "border_focus": colors["peach"],
-    "border_normal": colors["teal"],
+    "border_focus": colors["lavender"],
+    "border_normal": colors["overlay0"],
     "border_width": 3,
     "margin": 10,
 }

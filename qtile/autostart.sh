@@ -1,6 +1,6 @@
 #!/bin/sh
 setxkbmap tr
-killall -q polybar
+killall -q polybar picom
 polybar & disown
 echo "Polybar launched..."
 picom -b 

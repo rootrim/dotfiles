@@ -67,3 +67,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 
+# path config
+export PATH=$PATH:/home/rootrim/.spicetify
+export PATH="$PATH:/home/rootrim/.local/bin"
