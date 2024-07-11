@@ -3,5 +3,5 @@ setxkbmap tr
 killall -q polybar picom
 polybar & disown
 echo "Polybar launched..."
-picom -b 
+picom & 
 echo "Picom launched..."
