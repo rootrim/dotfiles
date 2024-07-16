@@ -31,9 +31,8 @@ keys = [
     Key([mod, "shift"], "n", lazy.layout.reset()),
     Key([mod], "m", lazy.layout.maximize()),
     Key([mod, "shift"], "space", lazy.layout.flip()),
-
     Key([mod], "Return", lazy.spawn(terminal), ),
-    Key([mod], "Tab", lazy.next_layout(), ),
+    Key([mod, "control"], "Tab", lazy.next_layout(), ),
     Key([mod], "q", lazy.window.kill(), ),
     Key([mod], "f", lazy.window.toggle_fullscreen(), ),
     Key([mod], "v", lazy.window.toggle_floating(), ),
@@ -42,8 +41,9 @@ keys = [
     Key([mod], "r", lazy.spawn("rofi -show drun"), ),
     Key([mod], "d", lazy.spawn("rofi -show run"), ),
     Key([mod], "p", lazy.spawn("rofi -show p -modi p:rofi-power-menu"), ),
-    Key([mod], "t", lazy.spawn("rofi -show window"), ),
+    Key([mod], "Tab", lazy.spawn("rofi -show window"), ),
     Key([mod, "shift"], "s",lazy.spawn("flameshot gui"), ),
+    Key([mod], "x", lazy.spawn("betterlockscreen -l")),
 ]
 
 colors = {
@@ -86,7 +86,7 @@ for vt in range(1, 8):
     )
 
 
-groups = [Group(i) for i in "123456789"]
+groups = [Group(i) for i in "1234567890"]
 
 for i in groups:
     keys.extend(
@@ -107,7 +107,7 @@ for i in groups:
     )
 
 layout_theme = {
-    "border_focus": colors["lavender"],
+    "border_focus": colors["mauve"],
     "border_normal": colors["overlay0"],
     "border_width": 3,
     "margin": 10,
@@ -175,4 +175,4 @@ wl_input_rules = None
 wl_xcursor_theme = None
 wl_xcursor_size = 24
 
-wmname = "QTILE"
+wmname = "Kutile"

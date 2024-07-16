@@ -8,5 +8,9 @@ return {
          highlight = { enable = true },
          indent = { enable = true },
       })
+
+       vim.filetype.add({
+         pattern = { [".*/Hyprland/.*%.conf"] = "hyprlang" },
+      })
    end,
 }

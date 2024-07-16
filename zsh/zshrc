@@ -1,5 +1,5 @@
 # Some variables
-
+EDITOR=nvim
 # Aliasses
 
 alias ls="ls --color"
