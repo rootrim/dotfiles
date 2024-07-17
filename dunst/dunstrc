@@ -1,16 +1,20 @@
 [global]
-frame_color = "#89b4fa"
-separator_color= frame
+font = Meslo LGM:size=14
+corner_radius = 10
+background = "#2F1E2E"
+foreground = "#B8A9AB"
+frame_width = 2
+frame_color = "#B8A9AB"
+origin = top-center
+horizontal_padding = 10
+width = (0, 500)
+offset = 0x10
 
 [urgency_low]
-background = "#1e1e2e"
-foreground = "#cdd6f4"
+foreground = "#6D6875"
 
 [urgency_normal]
-background = "#1e1e2e"
-foreground = "#cdd6f4"
+foreground = "#B8A9AB"
 
 [urgency_critical]
-background = "#1e1e2e"
-foreground = "#cdd6f4"
-frame_color = "#fab387"
+foreground = "#FFA737"
