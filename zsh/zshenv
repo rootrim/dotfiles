@@ -1,3 +1,5 @@
 export EDITOR="nvim"
 export PATH=$HOME/go/bin:$PATH
 export XDG_CURRENT_DESKTOP=Hyprland
+export PATH=$PATH:/home/rootrim/.spicetify
+export PATH="$PATH:/home/rootrim/.local/bin"
