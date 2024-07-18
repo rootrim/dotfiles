@@ -1,0 +1,195 @@
+{
+   "backlight": {
+      "interval": 2,
+      "align": 0,
+      "rotate": 0,
+      "format": " {icon} {percent}% ",
+      "format-icons": [
+         "󰃞",
+         "󰃟",
+         "󰃠"
+      ],
+      "icon-size": 10,
+      "on-click": "brillo -S 100",
+      "on-click-middle": "brillo -S 2",
+      "on-click-right": "brillo -S 50",
+      "on-update": "",
+      "on-scroll-up": "brillo -q -A 5",
+      "on-scroll-down": "brillo -q -U 5",
+      "smooth-scrolling-threshold": 1
+   },
+   "custom/updater": {
+      "format": "  {} ",
+      "exec": "~/.config/waybar/scripts/checkupdates",
+      "exec-if": "[[ $(checkupdates | wc -l) ]]",
+      "interval": 15,
+      "on-click": "kitty yay -Syu && notify-send 'The system has been updated'"
+   },
+   "custom/notification": {
+      "format": " {} ",
+      "exec": "~/.config/waybar/scripts/dunst.sh",
+      "on-click": "dunstctl set-paused toggle",
+      "restart-interval": 1
+   },
+   "custom/spotify": {
+      "exec": "~/.config/waybar/scripts/mediaplayer.py --player spotify",
+      "format": "   {} ",
+      "return-type": "json",
+      "on-click": "playerctl --player=spotify play-pause",
+      "on-scroll-up": "playerctl --player=spotify next",
+      "on-scroll-down": "playerctl --player=spotify previous"
+   },
+   "hyprland/window": {
+      "format": " {} ",
+      "max-length": 35,
+      "separate-outputs": true
+   },
+   "hyprland/workspaces": {
+      "format": "{icon}",
+      "active-only": false,
+      "show-special": false,
+      "on-click": "activate",
+      "all-outputs": true,
+      "sort-by-number": true,
+      "format-icons": {
+         "active": "",
+         "urgent": "",
+         "default": "",
+         "empty": ""
+      },
+      "on-scroll-up": "hyprctl dispatch workspace e+1",
+      "on-scroll-down": "hyprctl dispatch workspace e-1",
+      "persistent-workspaces": {
+         "*": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+         ]
+      }
+   },
+   "network": {
+      "format": "{ifname}",
+      "format-wifi": "󰤨 {essid}",
+      "format-ethernet": "󰈁 Wired",
+      "format-disconnected": "", //An empty format will hide the module.
+      "tooltip-format": " {ipaddr}  {bandwidthUpBytes}  {bandwidthDownBytes} ",
+      "format-linked": " 󰈁 {ifname} (No IP) ",
+      "tooltip-format-wifi": " {essid} ({signalStrength}%)   -  {bandwidthDownBytes}  {bandwidthUpBytes} ",
+      "tooltip-format-ethernet": " {ifname} 󰈁 ",
+      "tooltip-format-disconnected": " 󰈂 Disconnected ",
+      "max-length": 36
+   },
+   "memory": {
+      "interval": 10,
+      "format": "  {used:0.01f}G ",
+      "format-alt": "  {percentage}% ",
+      "format-alt-click": "click",
+      "tooltip": true,
+      "tooltip-format": " {used:0.1f}GB/{total:0.1f}G "
+   },
+   "battery": {
+      "interval": 60,
+      "align": 0,
+      "rotate": 0,
+      "full-at": 100,
+      "design-capacity": false,
+      "states": {
+         "good": 95,
+         "warning": 30,
+         "critical": 15
+      },
+      "format": " {icon}  {capacity}% ",
+      "format-charging": "  {capacity}% ",
+      "format-plugged": "  {capacity}% ",
+      "format-full": " {icon}  Full ",
+      "format-alt": " {icon} {time} ",
+      "format-icons": [
+         "",
+         "",
+         "",
+         "",
+         ""
+      ],
+      "format-time": "{H}h {M}min",
+      "tooltip": true,
+      "tooltip-format": " {timeTo} {power}w "
+   },
+   "pulseaudio": {
+      "format": " {icon} {volume}% ",
+      "format-bluetooth": " {icon}  {volume} % ",
+      "format-muted": "  ",
+      "format-icons": {
+         "headphone": " ",
+         "hands-free": " ",
+         "headset": " ",
+         "phone": "",
+         "portable": "",
+         "car": "",
+         "default": [
+            "",
+            "",
+            "󰕾",
+            " "
+         ],
+         "ignored-sinks": [
+            "Easy Effects Sink"
+         ]
+      },
+      "scroll-step": 5.0,
+      "on-click": "pavucontrol",
+      //"on-click-right": "",
+      //"on-scroll-up": "",
+      //"on-scroll-down": "",
+      "smooth-scrolling-threshold": 1
+   },
+   "pulseaudio#microphone": {
+      "format": "{format_source}",
+      "format-source": " {volume}%",
+      "format-source-muted": " ",
+      //"on-click": "",
+      //"on-click-right": "",
+      //"on-scroll-up": "",
+      //"on-scroll-down": "",
+      "scroll-step": 5
+   },
+   "disk": {
+      "format": "󰋊 {percentage_used}%"
+   },
+   "clock": {
+      "format": " 󰥔 {:%a, %H:%M} ",
+      "format-alt": " 󰥔 {:%H:%M   %Y, %d %B, %A} ",
+      "tooltip-format": " <tt><small>{calendar}</small></tt> ",
+      "calendar": {
+         "mode": "month",
+         "weeks-pos": "left",
+         "format": {
+            "months": "<span color='#ffead3'><b>{}</b></span>",
+            "days": "<span color='#ecc6d9'><b>{}</b></span>",
+            "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+            "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+            "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+         }
+      }
+   },
+   "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+   },
+   "tray": {
+      "icon-size": 20,
+      "spacing": 9
+   },
+   "custom/btw": {
+      "format": " 󰣇 |  ",
+      "on-click-left": "kitty niyofetchbut5sec"
+   }
+}

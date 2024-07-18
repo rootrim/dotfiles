@@ -1,0 +1,131 @@
+@import url("/home/rootrim/.config/waybar/colors.css");
+
+* {
+   padding: 0px;
+   margin: 0px;
+   border-radius: 0px;
+   font-family: "CaskaydiaCoveNF";
+   font-size: 14px;
+   font-weight: 800;
+}
+
+window#waybar {
+   background: @base;
+   color: @text;
+   border-radius: 15px;
+   border: 3px solid @mauve;
+}
+
+
+#disk,
+#window,
+#mpris,
+#custom-updater,
+#network,
+#clock,
+#tray,
+
+#workspaces {
+   margin-left: 9px;
+   padding-right: 9px;
+   background-color: @surface0;
+   margin-top: 7px;
+   margin-bottom: 7px;
+   border-radius: 10px;
+}
+
+#workspaces button {
+   padding-right: 6px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   color: @text;
+   border-radius: 10px;
+}
+
+#workspaces button.active {
+   background-color: @overlay0;
+   border-radius: 10px;
+}
+
+#workspaces button.urgent {
+   background-color: @overlay1;
+   border-radius: 10px;
+}
+
+#window {
+   background-color: @base;
+   margin-top: 7px;
+   margin-bottom: 7px;
+   border-radius: 10px;
+   padding: 0px 10px 0px 10px;
+}
+
+
+#custom-updater {
+   background-color: transparent;
+   color: @red;
+}
+
+#battery {
+   background-color: transparent;
+   color: @green;
+}
+
+#backlight {
+   background-color: transparent;
+   color: @red;
+}
+
+
+#network {
+   color: @blue;
+   background-color: @base;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   border-radius: 7px
+}
+
+
+#pulseaudio {
+   background-color: transparent;
+   color: @lavender;
+}
+
+#pulseaudio.microphone {
+   color: @lavender;
+}
+
+#memory {
+   background-color: transparent;
+   color: @yellow;
+}
+
+#bluetooth {
+   color: @blue;
+}
+
+#clock {
+   color: @base;
+   background-color: @green;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   margin-right: 10px;
+   border-radius: 7px;
+}
+
+#disk {
+   color: @cyan;
+}
+
+#tray {
+   margin-right: 10px;
+}
+
+#custom-spotify {
+   background-color: transparent;
+}
+
+#custom-notification {
+   background-color: transparent;
+   color: @red;
+}

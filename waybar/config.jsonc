@@ -1,0 +1,32 @@
+[
+   {
+      "include": "~/.config/waybar/modules.jsonc",
+      "layer": "top",
+      "exclusive": true,
+      "passthrough": false,
+      "position": "top",
+      "spacing": 3,
+      "fixed-center": true,
+      "ipc": true,
+      "margin-top": 6,
+      "margin-left": 8,
+      "margin-right": 8,
+      "modules-left": [
+         "hyprland/workspaces",
+         "hyprland/window"
+      ],
+      "modules-center": [
+         "custom/spotify"
+      ],
+      "modules-right": [
+         "custom/updater",
+         "custom/notification",
+         "memory",
+         "pulseaudio",
+         "backlight",
+         "battery",
+         "network",
+         "clock"
+      ]
+   }
+]
