@@ -1,5 +1,6 @@
 # Some variables
 EDITOR=nvim
+
 # Aliasses
 
 alias ls="ls --color"
@@ -9,7 +10,7 @@ alias editconf="nvim ~/.dotfiles/qtile/config.py"
 alias tree="tree -C"
 alias zource="source ~/.zshrc"
 alias la="ls -a"
-alias dotf="cd ~/.dotfiles;nvim"
+alias dotf="nvim ~/.dotfiles"
 
 # Plugins
 
