@@ -40,7 +40,7 @@
       "on-scroll-down": "playerctl --player=spotify previous"
    },
    "hyprland/window": {
-      "format": " {} ",
+      "format": "{}",
       "max-length": 35,
       "separate-outputs": true
    },
