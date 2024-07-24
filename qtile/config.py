@@ -1,11 +1,10 @@
 import os.path
 import subprocess
 
-from libqtile import bar, hook, layout, qtile, widget
+from libqtile import hook, layout, qtile
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
-
+import libqtile.layout
 
 @hook.subscribe.startup
 def autostart():
