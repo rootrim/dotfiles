@@ -22,10 +22,11 @@ source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 source ~/.dotfiles/zsh/plugin_files/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.dotfiles/zsh/plugin_files/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-# History Substring Search settings
+# Binds
 
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
+bindkey '^[l' clear-screen
 
 # zsh-completions Settings
 
