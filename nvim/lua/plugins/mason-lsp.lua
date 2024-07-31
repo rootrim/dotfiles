@@ -9,20 +9,9 @@ return {
    {
       "williamboman/mason-lspconfig.nvim",
       lazy = false,
-      config = function()
-         require("mason-lspconfig").setup({
-            ensure_installed = {
-               "lua_ls",
-               "pyright",
-               "bashls",
-               "html",
-               "cssls",
-               "taplo",
-               "markdown_oxide",
-               "jsonls",
-            },
-         })
-      end,
+      opts = {
+         auto_install = true,
+      },
    },
    {
       "neovim/nvim-lspconfig",
@@ -58,7 +47,7 @@ return {
 
          lspconfig.hyprls.setup({
             cmd = { "hyprls" },
-            root_dir = function(fname)
+            root_dir = function()
                return vim.fn.getcwd() -- veya uygun bir root_dir fonksiyonu
             end,
             capabilities = capabilities,
