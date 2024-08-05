@@ -2,6 +2,14 @@ return {
    {
       "williamboman/mason.nvim",
       lazy = false,
+      opts = {
+         ensure_installed = {
+            "mypy",
+            "ruff",
+            "pyright",
+            "stylua"
+         }
+      },
       config = function()
          require("mason").setup()
       end,
