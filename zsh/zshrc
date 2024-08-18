@@ -10,6 +10,7 @@ alias tree="tree -C"
 alias zource="source ~/.zshrc"
 alias la="ls -a"
 alias dotf="cd ~/.dotfiles"
+alias p="cd pyt"
 
 # Plugins
 
