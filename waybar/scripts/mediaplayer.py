@@ -42,8 +42,10 @@ def on_metadata(player, metadata, manager):
     ):
         track_info = "AD PLAYING"
     elif player.get_artist() != "" and player.get_title() != "":
+        artist = player.get_artist() or ""
+        title = player.get_title() or ""
         track_info = "{artist:.15} | {title:.20}".format(
-            artist=player.get_artist(), title=player.get_title()
+            artist=artist, title=title
         )
     else:
         track_info = player.get_title()
