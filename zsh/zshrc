@@ -11,6 +11,8 @@ alias zource="source ~/.zshrc"
 alias la="ls -a"
 alias dotf="cd ~/.dotfiles"
 alias p="cd pyt"
+alias gyro="/home/rootrim/.local/share/nvim/mason/packages/mypy/venv/bin/python -m pip --disable-pip-version-check install -U"
+alias konodioda='fzf-tmux --preview="bat --color=always {}"'
 
 # Plugins
 
@@ -68,3 +70,10 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+
+# bun completions
+[ -s "/home/rootrim/.bun/_bun" ] && source "/home/rootrim/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

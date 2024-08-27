@@ -1,21 +1,18 @@
-@import url("/home/rootrim/.config/waybar/colors.css");
-
 * {
-   padding: 0px;
-   margin: 0px;
-   border-radius: 0px;
+   padding: 0;
+   margin: 0;
+   border-radius: 0;
    font-family: "CaskaydiaCoveNF";
    font-size: 14px;
    font-weight: 800;
 }
 
 window#waybar {
-   background: @base;
-   color: @text;
+   background: #1e1e2e;
+   color: #cdd6f4;
    border-radius: 15px;
-   border: 3px solid @mauve;
+   border: 3px solid #cba6f7;
 }
-
 
 #disk,
 #mpris,
@@ -23,11 +20,10 @@ window#waybar {
 #network,
 #clock,
 #tray,
-
 #workspaces {
    margin-left: 9px;
    padding-right: 0px;
-   background-color: @surface0;
+   background-color: #313244;
    margin-top: 7px;
    margin-bottom: 7px;
    border-radius: 10px;
@@ -37,75 +33,72 @@ window#waybar {
    padding-right: 6px;
    padding-top: 3px;
    padding-bottom: 3px;
-   color: @text;
+   color: #cdd6f4;
    border-radius: 10px;
 }
 
 #workspaces button.active {
-   background-color: @overlay0;
+   background-color: #6c7086;
    border-radius: 10px;
 }
 
 #workspaces button.urgent {
-   background-color: @overlay1;
+   background-color: #7f849c;
    border-radius: 10px;
 }
 
 #window {
-   background-color: @base;
+   background-color: #1e1e2e;
    margin-top: 7px;
    margin-bottom: 7px;
    border-radius: 10px;
    padding: 0px 10px 0px 7px;
 }
 
-
 #custom-updater {
    background-color: transparent;
-   color: @red;
+   color: #f38ba8;
 }
 
 #battery {
    background-color: transparent;
-   color: @green;
+   color: #a6e3a1;
 }
 
 #backlight {
    background-color: transparent;
-   color: @red;
+   color: #f38ba8;
 }
-
 
 #network {
-   color: @blue;
-   background-color: @base;
+   color: #89b4fa;
+   background-color: #1e1e2e;
    margin-top: 10px;
    margin-bottom: 10px;
-   border-radius: 7px
+   border-radius: 7px;
 }
-
 
 #pulseaudio {
    background-color: transparent;
-   color: @lavender;
+   color: #b4befe;
 }
 
 #pulseaudio.microphone {
-   color: @lavender;
+   color: #b4befe;
 }
 
 #memory {
    background-color: transparent;
-   color: @yellow;
+   color: #f9e2af;
 }
 
 #bluetooth {
-   color: @blue;
+   color: #89b4fa;
 }
 
 #clock {
-   color: @base;
-   background-color: @green;
+   color: #1e1e2e;
+   background-color: #a6e3a1;
    margin-top: 10px;
    margin-bottom: 10px;
    margin-right: 10px;
@@ -113,7 +106,7 @@ window#waybar {
 }
 
 #disk {
-   color: @cyan;
+   color: cyan;
 }
 
 #tray {
@@ -121,10 +114,24 @@ window#waybar {
 }
 
 #custom-spotify {
-   background-color: transparent;
+   color: #1e1e2e;
+   background-color: #a6e3a1;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   margin-right: 10px;
+   border-radius: 7px;
+}
+
+#custom-firefox {
+   color: #1e1e2e;
+   background-color: #fab387;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   margin-right: 10px;
+   border-radius: 7px;
 }
 
 #custom-notification {
    background-color: transparent;
-   color: @red;
+   color: #f38ba8;
 }
