@@ -10,7 +10,11 @@ alias tree="tree -C"
 alias zource="source ~/.zshrc"
 alias la="ls -a"
 alias dotf="cd ~/.dotfiles"
-alias p="cd pyt"
+alias Pytrim="cd Pytrim"
+alias Wright="cd Wright"
+alias Trust="cd Trust"
+alias cmoon="cd cmoon"
+alias Crime="cd Crime"
 alias gyro="/home/rootrim/.local/share/nvim/mason/packages/mypy/venv/bin/python -m pip --disable-pip-version-check install -U"
 alias konodioda='fzf-tmux --preview="bat --color=always {}"'
 
