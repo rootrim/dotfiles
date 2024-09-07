@@ -16,7 +16,7 @@ alias Trust="cd Trust"
 alias cmoon="cd cmoon"
 alias Crime="cd Crime"
 alias gyro="/home/rootrim/.local/share/nvim/mason/packages/mypy/venv/bin/python -m pip --disable-pip-version-check install -U"
-alias konodioda='fzf-tmux --preview="bat --color=always {}"'
+alias konodioda='fzf-tmux --preview="bat -p {}"'
 
 # Plugins
 

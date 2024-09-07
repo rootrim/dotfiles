@@ -43,11 +43,39 @@
     "on-scroll-up": "playerctl --player=firefox next",
     "on-scroll-down": "playerctl --player=firefox previous",
   },
+   "sway/mode": {
+      "format": "{}",
+      "max-lenght": 10,
+   },
+  "sway/window": {
+    "format": "{}",
+    "max-length": 35,
+    "separate-outputs": true,
+  },
 
   "hyprland/window": {
     "format": "{}",
     "max-length": 35,
     "separate-outputs": true,
+  },
+  "sway/workspaces": {
+    "format": "{icon}",
+    "active-only": false,
+    "show-special": false,
+    "on-click": "activate",
+    "all-outputs": true,
+    "sort-by-number": true,
+    "format-icons": {
+      "active": "",
+      "urgent": "",
+      "default": "",
+      "empty": "",
+    },
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    },
   },
   "hyprland/workspaces": {
     "format": "{icon}",
