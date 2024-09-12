@@ -20,14 +20,14 @@ alias konodioda='fzf-tmux --preview="bat -p {}"'
 
 # Plugins
 
-source ~/.dotfiles/zsh/plugin_files/ohmyzsh-plugins/sudo-plugin.zsh
-source ~/.dotfiles/zsh/plugin_files/ohmyzsh-plugins/command-not-found-plugin.zsh
-source ~/.dotfiles/zsh/plugin_files/zsh-completions/zsh-completions.plugin.zsh
-source ~/.dotfiles/zsh/plugin_files/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.dotfiles/zsh/plugin_files/fzf-tab/fzf-tab.plugin.zsh
+source ~/dotfiles/zsh/plugin_files/ohmyzsh-plugins/sudo-plugin.zsh
+source ~/dotfiles/zsh/plugin_files/ohmyzsh-plugins/command-not-found-plugin.zsh
+source ~/dotfiles/zsh/plugin_files/zsh-completions/zsh-completions.plugin.zsh
+source ~/dotfiles/zsh/plugin_files/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/dotfiles/zsh/plugin_files/fzf-tab/fzf-tab.plugin.zsh
 source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
-source ~/.dotfiles/zsh/plugin_files/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.dotfiles/zsh/plugin_files/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ~/dotfiles/zsh/plugin_files/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/dotfiles/zsh/plugin_files/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # Binds
 
@@ -43,7 +43,7 @@ fpath=(~/.dotfiles/zsh/plugin-files/zsh-completions/src $fpath)
 # Themes
 
 # eval "$(starship init zsh)"
-eval "$(oh-my-posh init zsh --config ~/.dotfiles/zsh/themes/oh-my-posh/zen.toml)"
+eval "$(oh-my-posh init zsh --config ~/dotfiles/zsh/themes/oh-my-posh/zen.toml)"
 
 # Set up fzf key bindings and fuzzy completion
 
