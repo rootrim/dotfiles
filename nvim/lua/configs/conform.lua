@@ -4,6 +4,7 @@ local options = {
     css = { "prettier" },
     html = { "prettier" },
     python = { "black" },
+    c = { "clangd" },
   },
 
   format_on_save = {

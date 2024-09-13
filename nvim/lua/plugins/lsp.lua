@@ -4,6 +4,7 @@ return {
     opts = {
       pkgs = {
         "pyright",
+        "clangd",
       },
     },
   },
@@ -11,24 +12,33 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local config = require "plugins.lsp"
-
       local on_attach = config.on_attach
       local capabilities = config.capabilities
 
       local lspconfig = require "lspconfig"
-
       local servers = {
         "pyright",
         "ruff_lsp",
+        "clangd",
       }
 
-      for _, lsp in ipairs(servers) do
-        lspconfig[lsp].setup {
-          on_attach = on_attach,
-          capabilities = capabilities,
-          filetypes = { "python" },
-        }
-      end
+      -- Pyright for Python
+      lspconfig.pyright.setup {
+        on_attach = on_attach,
+        capabilities = capabilities,
+      }
+
+      -- Ruff (Python linter)
+      lspconfig.ruff_lsp.setup {
+        on_attach = on_attach,
+        capabilities = capabilities,
+      }
+
+      -- Clangd for C
+      lspconfig.clangd.setup {
+        on_attach = on_attach,
+        capabilities = capabilities,
+      }
     end,
   },
 }
