@@ -9,13 +9,13 @@ alias grep="grep --color=auto"
 alias tree="tree -C"
 alias zource="source ~/.zshrc"
 alias la="ls -a"
+alias nv=nvim
 alias dotf="cd ~/.dotfiles"
-alias Pytrim="cd Pytrim"
-alias Wright="cd Wright"
-alias Trust="cd Trust"
+alias pytrim="cd pytrim"
+alias wright="cd wright"
+alias trust="cd trust"
 alias cmoon="cd cmoon"
-alias Crime="cd Crime"
-alias gyro="/home/rootrim/.local/share/nvim/mason/packages/mypy/venv/bin/python -m pip --disable-pip-version-check install -U"
+alias crime="cd crime"
 alias konodioda='fzf-tmux --preview="bat -p {}"'
 
 # Plugins
