@@ -20,6 +20,7 @@ return {
         "pyright",
         "ruff_lsp",
         "clangd",
+        "lua_ls",
       }
 
       -- Pyright for Python
@@ -36,6 +37,12 @@ return {
 
       -- Clangd for C
       lspconfig.clangd.setup {
+        on_attach = on_attach,
+        capabilities = capabilities,
+      }
+
+      -- lua_ls for Lua
+      lspconfig.lua_ls.setup {
         on_attach = on_attach,
         capabilities = capabilities,
       }
