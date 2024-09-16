@@ -6,7 +6,7 @@ local on_init = configs.on_init
 local capabilities = configs.capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "clangd", "pyright", "ruff_lsp", "hyprls" }
+local servers = { "html", "cssls", "clangd", "pyright", "ruff_lsp", "hyprls", "bashls" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {

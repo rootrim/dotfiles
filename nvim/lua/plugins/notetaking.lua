@@ -8,6 +8,7 @@ return {
   },
   {
     "nvim-neorg/neorg",
+    dependencies = { "nvim-neorg/lua-utils.nvim" },
     lazy = false,
     version = "*",
     config = true,
