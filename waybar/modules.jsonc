@@ -152,7 +152,7 @@
       "ignored-sinks": ["Easy Effects Sink"],
     },
     "scroll-step": 5.0,
-    "on-click": "pavucontrol",
+    "on-click": "easyeffects",
     //"on-click-right": "",
     //"on-scroll-up": "",
     //"on-scroll-down": "",
@@ -197,9 +197,5 @@
   "tray": {
     "icon-size": 20,
     "spacing": 9,
-  },
-  "custom/btw": {
-    "format": " 󰣇 |  ",
-    "on-click-left": "kitty niyofetchbut5sec",
   },
 }
