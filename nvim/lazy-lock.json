@@ -1,6 +1,7 @@
 {
   "LuaSnip": { "branch": "master", "commit": "e808bee352d1a6fcf902ca1a71cee76e60e24071" },
   "NvChad": { "branch": "v2.5", "commit": "db9d45cc3da403ad6213e7fc439dc7edf62a945e" },
+  "arduino-nvim": { "branch": "main", "commit": "5988e7b08d8d6dc0a2d37e805cbed57dc13d869a" },
   "base46": { "branch": "v2.5", "commit": "85e10a6ecbb8a9a0ca2db0a2c22f656c739925a3" },
   "cellular-automaton.nvim": { "branch": "main", "commit": "11aea08aa084f9d523b0142c2cd9441b8ede09ed" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
@@ -36,6 +37,7 @@
   "render-markdown.nvim": { "branch": "main", "commit": "fe1002fddc61207e4ef4325d4bc0ca33697bbc7a" },
   "telescope.nvim": { "branch": "master", "commit": "dc6fc321a5ba076697cca89c9d7ea43153276d81" },
   "ui": { "branch": "v3.0", "commit": "5cf39e7c75616e75107310d9d0aefe78e817a70f" },
+  "vim-arduino": { "branch": "master", "commit": "2ded67cdf09bb07c4805d9e93d478095ed3d8606" },
   "volt": { "branch": "main", "commit": "43f72b49037c191eb3cfe26ba7a5574b4bfce226" },
   "which-key.nvim": { "branch": "main", "commit": "8badb359f7ab8711e2575ef75dfe6fbbd87e4821" }
 }

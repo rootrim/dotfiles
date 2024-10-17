@@ -42,6 +42,7 @@
     "on-click": "playerctl --player=firefox play-pause",
     "on-scroll-up": "playerctl --player=firefox next",
     "on-scroll-down": "playerctl --player=firefox previous",
+    "max-length": 35,
   },
    "sway/mode": {
       "format": "{}",
@@ -98,6 +99,7 @@
   },
   "network": {
     "format": "{ifname}",
+    "format-alt": "󰤨 Wireless",
     "format-wifi": "󰤨 {essid}",
     "format-ethernet": "󰈁 Wired",
     "format-disconnected": "", //An empty format will hide the module.
@@ -182,7 +184,7 @@
         "months": "<span color='#ffead3'><b>{}</b></span>",
         "days": "<span color='#ecc6d9'><b>{}</b></span>",
         "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "weekdays": "<span color='ffcc66'><b>{}</b></span>",
         "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
       },
     },

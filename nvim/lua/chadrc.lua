@@ -5,7 +5,7 @@ M = {
   base46 = {
     theme = "catppuccin",
     transparency = false,
-    theme_toggle = { "catppuccin", "nord" },
+    theme_toggle = { "catppuccin", "gruvbox" },
   },
 
   nvdash = {

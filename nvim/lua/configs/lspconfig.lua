@@ -6,7 +6,8 @@ local on_init = configs.on_init
 local capabilities = configs.capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "clangd", "pyright", "ruff_lsp", "hyprls", "bashls", "ltex" }
+local servers =
+  { "html", "cssls", "clangd", "pyright", "ruff_lsp", "hyprls", "bashls", "markdown_oxide", "arduino_language_server" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
