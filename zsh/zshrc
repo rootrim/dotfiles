@@ -20,6 +20,7 @@ alias trust="cd trust"
 alias cmoon="cd cmoon"
 alias crime="cd crime"
 alias konodioda='fzf-tmux --preview="bat -p {}"'
+alias fatihfetch="neofetch --backend kitty --source dotfiles/xfetch/fetchimgs/Fatih-Hocalarda-Beş-Gece.jpg"
 
 # Plugins
 
