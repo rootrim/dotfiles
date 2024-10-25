@@ -21,3 +21,5 @@ Here is some photos of my Arch + Hyprland rice.
 ![Listening Songs](images/listeningSongs.png)
 
 ![Rofi Preview](images/rofiPreview.png)
+
+![Cool Photo](images/coolPhoto.png)
