@@ -1,16 +1,37 @@
 local options = {
   formatters_by_ft = {
+    astro = { "prettierd" },
+    css = { "prettierd" },
+    gdscript = { "gdformat" },
+    go = { "gofmt" },
+    haskell = { "ormolu" },
+    javascript = { "prettierd" },
+    javascriptreact = { "prettierd" },
+    json = { "prettierd" },
     lua = { "stylua" },
-    css = { "prettier" },
-    html = { "prettier" },
-    markdown = { "prettier" },
+    mdx = { "prettierd" },
     python = { "black" },
-    c = { "clangd" },
+    rust = { "rustfmt" },
+    svelte = { "prettierd" },
+    typescript = { "prettierd" },
+    typescriptreact = { "prettierd" },
+    verilog = { "verible" },
+    yaml = { "prettierd" },
   },
-
-  format_on_save = {
-    timeout_ms = 500,
+  format_after_save = {
     lsp_fallback = true,
+    quiet = true,
+  },
+  formatters = {
+    gdformat = {
+      command = "gdformat",
+      args = "$FILENAME",
+      stdin = false,
+    },
+    verible = {
+      command = "verible-verilog-format",
+      prepend_args = { "--indentation_spaces", "4" },
+    },
   },
 }
 
