@@ -54,20 +54,24 @@ def setup_formatters(api: DooitAPI, _):
 
     # --------- TODOS ---------
     # status formatter
-    fmt.todos.status.add(status_icons(completed=" ", pending="󰞋 ", overdue="󰅗 "))
+    fmt.todos.status.add(status_icons(completed=" ", pending=" ", overdue=" "))
 
     # urgency formatte
-    u_icons = {1: "  󰎤", 2: "  󰎧", 3: "  󰎪", 4: "  󰎭"}
+    u_icons = {1: "  󰯬", 2: "  󰯯", 3: "  󰯲", 4: "  󰯵"}
     fmt.todos.urgency.add(urgency_icons(icons=u_icons))
 
     # due formatter
     fmt.todos.due.add(due_casual_format())
-    fmt.todos.due.add(due_icon(completed=" ", pending=" ", overdue=" "))
+    fmt.todos.due.add(due_icon(completed="󱫐 ", pending="󱫚 ", overdue="󱫦 "))
+
+    # effort formatter
+    fmt.todos.effort.add(effort_icon(icon="󱠇 "))
 
     # description formatter
-    format = Text("  {completed_count}/{total_count}", style=theme.green).markup
+    format = Text("  {completed_count}/{total_count}", style=theme.green).markup
     fmt.todos.description.add(todo_description_progress(fmt=format))
     fmt.todos.description.add(description_highlight_tags(fmt=" {}"))
+    fmt.todos.description.add(description_strike_completed())
 
 
 @subscribe(Startup)
@@ -101,27 +105,29 @@ def setup_dashboard(api: DooitAPI, _):
     theme = api.vars.theme
 
     ascii_art = r"""
-   ,-.       _,---._ __  / \
- /  )    .-'       `./ /   \
-(  (   ,'            `/    /|
- \  `-"             \'\   / |
-  `.              ,  \ \ /  |
-   /`.          ,'-`----Y   |
-  (            ;        |   '
-  |  ,-.    ,-'         |  /
-  |  | (   |      TODOS | /
-  )  |  \  `.___________|/
-  `--'   `--'
+⣿⣿⣿⣿⣿⣿⣿⡿⡛⠟⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⠿⠨⡀⠄⠄⡘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⠿⢁⠼⠊⣱⡃⠄⠈⠹⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⡿⠛⡧⠁⡴⣦⣔⣶⣄⢠⠄⠄⠹⣿⣿⣿⣿⣿⣿⣿⣤⠭⠏⠙⢿⣿⣿⣿⣿⣿
+⣿⡧⠠⠠⢠⣾⣾⣟⠝⠉⠉⠻⡒⡂⠄⠙⠻⣿⣿⣿⣿⣿⡪⠘⠄⠉⡄⢹⣿⣿⣿⣿
+⣿⠃⠁⢐⣷⠉⠿⠐⠑⠠⠠⠄⣈⣿⣄⣱⣠⢻⣿⣿⣿⣿⣯⠷⠈⠉⢀⣾⣿⣿⣿⣿
+⣿⣴⠤⣬⣭⣴⠂⠇⡔⠚⠍⠄⠄⠁⠘⢿⣷⢈⣿⣿⣿⣿⡧⠂⣠⠄⠸⡜⡿⣿⣿⣿
+⣿⣇⠄⡙⣿⣷⣭⣷⠃⣠⠄⠄⡄⠄⠄⠄⢻⣿⣿⣿⣿⣿⣧⣁⣿⡄⠼⡿⣦⣬⣰⣿
+⣿⣷⣥⣴⣿⣿⣿⣿⠷⠲⠄⢠⠄⡆⠄⠄⠄⡨⢿⣿⣿⣿⣿⣿⣎⠐⠄⠈⣙⣩⣿⣿
+⣿⣿⣿⣿⣿⣿⢟⠕⠁⠈⢠⢃⢸⣿⣿⣶⡘⠑⠄⠸⣿⣿⣿⣿⣿⣦⡀⡉⢿⣧⣿⣿
+⣿⣿⣿⣿⡿⠋⠄⠄⢀⠄⠐⢩⣿⣿⣿⣿⣦⡀⠄⠄⠉⠿⣿⣿⣿⣿⣿⣷⣨⣿⣿⣿
+⣿⣿⣿⡟⠄⠄⠄⠄⠄⠋⢀⣼⣿⣿⣿⣿⣿⣿⣿⣶⣦⣀⢟⣻⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⡆⠆⠄⠠⡀⡀⠄⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⡿⡅⠄⠄⢀⡰⠂⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
     """
 
     ascii_art = Text(ascii_art, style=theme.primary)
-    ascii_art.highlight_words(["TODOS"], style=theme.red)
 
     due_today = sum([1 for i in Todo.all() if i.is_due_today and i.is_pending])
     overdue = sum([1 for i in Todo.all() if i.is_overdue])
 
     header = Text(
-        "Another day, another opportunity to organize my todos and then procrastinate",
+        "Hoho, Dewa juubun chikazukanai youi!",
         style=Style(color=theme.secondary, bold=True, italic=True),
     )
 
