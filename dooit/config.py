@@ -54,7 +54,7 @@ def setup_formatters(api: DooitAPI, _):
 
     # --------- TODOS ---------
     # status formatter
-    fmt.todos.status.add(status_icons(completed=" ", pending=" ", overdue=" "))
+    fmt.todos.status.add(status_icons(completed="󱓻 ", pending="󱓼 ", overdue="󱓼 "))
 
     # urgency formatte
     u_icons = {1: "  󰯬", 2: "  󰯯", 3: "  󰯲", 4: "  󰯵"}
@@ -62,15 +62,15 @@ def setup_formatters(api: DooitAPI, _):
 
     # due formatter
     fmt.todos.due.add(due_casual_format())
-    fmt.todos.due.add(due_icon(completed="󱫐 ", pending="󱫚 ", overdue="󱫦 "))
+    fmt.todos.due.add(due_icon(completed="󰐅 ", pending="󱢗 ", overdue="󱐚 "))
 
     # effort formatter
     fmt.todos.effort.add(effort_icon(icon="󱠇 "))
 
     # description formatter
-    format = Text("  {completed_count}/{total_count}", style=theme.green).markup
+    format = Text("  {completed_count}/{total_count}", style=theme.green).markup
     fmt.todos.description.add(todo_description_progress(fmt=format))
-    fmt.todos.description.add(description_highlight_tags(fmt=" {}"))
+    fmt.todos.description.add(description_highlight_tags(fmt="󰌪 {}"))
     fmt.todos.description.add(description_strike_completed())
 
 
@@ -78,7 +78,6 @@ def setup_formatters(api: DooitAPI, _):
 def setup_layout(api: DooitAPI, _):
     api.layouts.todo_layout = [
         TodoWidget.status,
-        TodoWidget.effort,
         TodoWidget.description,
         TodoWidget.due,
     ]
@@ -87,15 +86,21 @@ def setup_layout(api: DooitAPI, _):
 @subscribe(Startup)
 def setup_bar(api: DooitAPI, _):
     theme = api.vars.theme
+    mode_style = Style(color=theme.background1, bgcolor=theme.primary, bold=True)
 
     widgets = [
-        TextBox(api, " 󰄛 ", bg=theme.magenta),
-        Spacer(api, width=1),
-        Mode(api, format_normal=" 󰷸 NORMAL ", format_insert=" 󰛿 INSERT "),
+        Mode(
+            api,
+            format_normal="NOR",
+            format_insert="INS",
+            fmt=Text(" 󰌪 {}", style=mode_style).markup,
+        ),
+        Powerline.right_rounded(api, fg=theme.primary),
         Spacer(api, width=0),
-        WorkspaceProgress(api, fmt=" 󰞯 {}% ", bg=theme.secondary),
-        Spacer(api, width=1),
-        Date(api, fmt=" 󰃰 {} "),
+        Powerline.left_rounded(api, fg=theme.primary),
+        Ticker(api, fmt=" 󱎫 {} "),
+        Powerline.left_rounded(api, fg=theme.yellow, bg=theme.primary),
+        Clock(api, format="%H:%M", fmt=" 󰥔 {} ", bg=theme.yellow),
     ]
     api.bar.set(widgets)
 
@@ -119,15 +124,12 @@ def setup_dashboard(api: DooitAPI, _):
 ⣿⣿⣿⡟⠄⠄⠄⠄⠄⠋⢀⣼⣿⣿⣿⣿⣿⣿⣿⣶⣦⣀⢟⣻⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⡆⠆⠄⠠⡀⡀⠄⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⡿⡅⠄⠄⢀⡰⠂⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-    """
+"""
 
     ascii_art = Text(ascii_art, style=theme.primary)
 
-    due_today = sum([1 for i in Todo.all() if i.is_due_today and i.is_pending])
-    overdue = sum([1 for i in Todo.all() if i.is_overdue])
-
     header = Text(
-        "Hoho, Dewa juubun chikazukanai youi!",
+        "Hō… mukatte kuru no ka…… nigezu ni kono DIO ni chikadzuite kuru no ka……",
         style=Style(color=theme.secondary, bold=True, italic=True),
     )
 
@@ -136,7 +138,11 @@ def setup_dashboard(api: DooitAPI, _):
         ascii_art,
         "",
         "",
-        Text("󰠠 Tasks pending today: {}".format(due_today), style=theme.green),
-        Text("󰁇 Tasks still overdue: {}".format(overdue), style=theme.red),
+        Text("Hoho! Dewa juubun chikazukanai youi.", style=theme.secondary),
     ]
     api.dashboard.set(items)
+
+
+@subscribe(Startup)
+def additional_setup(api: DooitAPI, _):
+    dim_unfocused(api, "60%")
