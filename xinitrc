@@ -15,4 +15,4 @@ feh --bg-scale ~/dotfiles/wallpapers/tardis.jpg &
 picom --experimental-backends &
 
 # Start AwesomeWM
-exec awesome
+exec i3

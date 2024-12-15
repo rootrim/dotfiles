@@ -22,6 +22,7 @@ alias crime="cd crime"
 alias konodioda='fzf-tmux --preview="bat -p {}"'
 alias fatihfetch="neofetch --backend kitty --source dotfiles/xfetch/fetchimgs/Fatih-Hocalarda-Beş-Gece.jpg"
 alias kendirlifetch="neofetch --backend kitty --source ~/dotfiles/xfetch/fetchimgs/kendirli.png"
+alias enesfetch="neofetch --backend kitty --source ~/dotfiles/xfetch/fetchimgs/enesoruc.png"
 alias asciifetch="neofetch --source ~/.config/neofetch/aperture.txt --ascii"
 
 # Plugins
