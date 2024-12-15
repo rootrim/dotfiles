@@ -20,6 +20,7 @@ local servers = {
   "markdown_oxide",
   "arduino_language_server",
   "gleam",
+  "qml_lsp",
 }
 
 for _, lsp in ipairs(servers) do
