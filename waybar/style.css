@@ -1,138 +1,171 @@
+/* ================================ */
+/*           Global Reset          */
+/* ================================ */
 * {
   padding: 0;
   margin: 0;
+  min-height: 0;
   border-radius: 0;
-  font-family: "CaskaydiaCoveNF";
-  font-size: 12px;
-  font-weight: 800;
+  background: none;
+  border: none;
+  text-shadow: none;
+  transition: none;
+  box-shadow: none;
 }
 
+/* ================================ */
+/*           Waybar Window         */
+/* ================================ */
 window#waybar {
-  background: #282828;
-  color: #d79921;
+  color: #fff4d2;
 }
 
-#disk,
-#mpris,
-#custom-updater,
-#network,
-#clock,
+window#waybar.hidden {
+  opacity: 1;
+}
+
+/* ================================ */
+/*          Shared Styles          */
+/* ================================ */
+#custom-rofi,
+#workspaces button,
+#workspaces button:hover,
+#workspaces button.visible,
+#workspaces button.visible:hover,
+#workspaces button.active,
+#workspaces button.active:hover,
+#workspaces button.urgent,
+#window,
 #tray,
+#disk,
+#cpu,
+#temperature,
+#temperature.critical,
+#backlight,
+#custom-memory,
+#pulseaudio,
+#pulseaudio.muted,
+#battery,
+#battery.critical,
+#battery.warning,
+#clock {
+  font-family: "Cascadia Code Nerd Font Mono";
+  font-size: 15px;
+  font-weight: 800;
+  color: #222222;
+  background: #222222;
+  border: 3px solid #222222;
+}
+
+#window,
+#tray,
+#disk,
+#cpu,
+#temperature,
+#temperature.critical,
+#backlight,
+#custom-memory,
+#pulseaudio,
+#pulseaudio.muted,
+#battery,
+#battery.critical,
+#battery.warning,
+#clock {
+  padding-right: 4px;
+}
+
+/* ================================ */
+/*          Custom Rofi            */
+/* ================================ */
+#custom-rofi {
+  background: #83a598;
+  padding: 0 6px;
+}
+
+/* ================================ */
+/*         Workspaces Module       */
+/* ================================ */
 #workspaces {
-  margin-left: 20px;
-  padding-right: 0px;
-  background-color: #282828;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  border-radius: 1px;
+  margin: 0;
 }
 
 #workspaces button {
-  padding-right: 4px;
-  color: #d3869b;
-  border-radius: 10px;
+  color: #fff4d2;
+  padding: 0 4px;
+  margin: 0 3px;
+  min-width: 25px;
 }
 
-#workspaces button.active {
-  background-color: #d3869b;
-  border-radius: 10px;
+#workspaces button:hover {
+  background: #d3869b;
+}
+
+#workspaces button.visible,
+#workspaces button.visible:hover,
+#workspaces button.active,
+#workspaces button.active:hover {
+  background: #8ec07c;
 }
 
 #workspaces button.urgent {
-  background-color: #458588;
-  border-radius: 10px;
+  background: #ea6962;
 }
 
+/* ================================ */
+/*          Module Styles          */
+/* ================================ */
 #window {
-  background-color: #3c3836;
-  margin-top: 7px;
-  margin-bottom: 7px;
-  border-radius: 10px;
-  padding: 0px 10px 0px 7px;
-}
-
-#custom-updater {
-  background-color: transparent;
-  color: #f38ba8;
-}
-
-#battery {
-  background-color: transparent;
-  color: #a6e3a1;
-}
-
-#backlight {
-  background-color: transparent;
-  color: #f38ba8;
-}
-
-#network {
-  color: #fabd2f;
-  background-color: #3c3836;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 7px;
-}
-
-#pulseaudio {
-  background-color: transparent;
-  color: #b4befe;
-}
-
-#pulseaudio.microphone {
-  color: #b4befe;
-}
-
-#memory {
-  background-color: transparent;
-  color: #f9e2af;
-}
-
-#cpu {
-  background-color: transparent;
-  color: #f9e2af;
-}
-
-#bluetooth {
-  color: #89b4fa;
-}
-
-#clock {
-  color: #1e1e2e;
-  background-color: #a6e3a1;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  border-radius: 7px;
-}
-
-#disk {
-  color: cyan;
+  color: #d3869b;
 }
 
 #tray {
-  margin-right: 10px;
+  padding: 0 6px;
 }
 
-#custom-spotify {
-  color: #1e1e2e;
-  background-color: #a6e3a1;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  border-radius: 7px;
+#disk {
+  color: #ea6962;
 }
 
-#custom-firefox {
-  color: #1e1e2e;
-  background-color: #f38ba8;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  border-radius: 7px;
+#cpu {
+  color: #e78a4e;
 }
 
-#custom-notification {
-  background-color: transparent;
-  color: #f38ba8;
+#temperature {
+  color: #d8a657;
+}
+
+#temperature.critical {
+  color: #cc241d;
+}
+
+#backlight {
+  color: #f6c657;
+}
+
+#custom-memory {
+  color: #458588;
+}
+
+#pulseaudio {
+  color: #83a598;
+}
+
+#pulseaudio.muted {
+  color: #ea6962;
+}
+
+#battery {
+  color: #689d6a;
+}
+
+#battery.critical {
+  color: #cc241d;
+}
+
+#battery.warning {
+  color: #e78a4e;
+}
+
+#clock {
+  color: #8ec07c;
 }
