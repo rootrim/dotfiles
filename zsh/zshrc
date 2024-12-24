@@ -13,6 +13,7 @@ alias tree="tree -C"
 alias zource="source ~/.zshrc"
 alias la="ls -a"
 alias nv=nvim
+alias yay=paru
 alias dotf="cd ~/.dotfiles"
 alias pytrim="cd pytrim"
 alias wright="cd wright"
@@ -99,3 +100,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 source /home/rootrim/.config/broot/launcher/bash/br
 
 export PATH=$PATH:/home/rootrim/.spicetify
+export LD_LIBRARY_PATH=/home/rootrim/.local/lib/arch-mojo:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/rootrim/.local/lib/arch-mojo:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/rootrim/.local/lib/arch-mojo:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/rootrim/.local/lib/arch-mojo:$LD_LIBRARY_PATH
