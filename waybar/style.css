@@ -1,171 +1,111 @@
-/* ================================ */
-/*           Global Reset          */
-/* ================================ */
+@import "gruvbox.css";
+
 * {
-  padding: 0;
-  margin: 0;
   min-height: 0;
-  border-radius: 0;
-  background: none;
-  border: none;
-  text-shadow: none;
-  transition: none;
-  box-shadow: none;
+  min-width: 0;
+  font-family: Lexend, "Caskaydia Cove Nerd Font Propo";
+  font-size: 16px;
+  font-weight: 600;
 }
 
-/* ================================ */
-/*           Waybar Window         */
-/* ================================ */
 window#waybar {
-  color: #fff4d2;
-}
-
-window#waybar.hidden {
-  opacity: 1;
-}
-
-/* ================================ */
-/*          Shared Styles          */
-/* ================================ */
-#custom-rofi,
-#workspaces button,
-#workspaces button:hover,
-#workspaces button.visible,
-#workspaces button.visible:hover,
-#workspaces button.active,
-#workspaces button.active:hover,
-#workspaces button.urgent,
-#window,
-#tray,
-#disk,
-#cpu,
-#temperature,
-#temperature.critical,
-#backlight,
-#custom-memory,
-#pulseaudio,
-#pulseaudio.muted,
-#battery,
-#battery.critical,
-#battery.warning,
-#clock {
-  font-family: "Cascadia Code Nerd Font Mono";
-  font-size: 15px;
-  font-weight: 800;
-  color: #222222;
-  background: #222222;
-  border: 3px solid #222222;
-}
-
-#window,
-#tray,
-#disk,
-#cpu,
-#temperature,
-#temperature.critical,
-#backlight,
-#custom-memory,
-#pulseaudio,
-#pulseaudio.muted,
-#battery,
-#battery.critical,
-#battery.warning,
-#clock {
-  padding-right: 4px;
-}
-
-/* ================================ */
-/*          Custom Rofi            */
-/* ================================ */
-#custom-rofi {
-  background: #83a598;
-  padding: 0 6px;
-}
-
-/* ================================ */
-/*         Workspaces Module       */
-/* ================================ */
-#workspaces {
-  margin: 0;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  background-color: @background;
 }
 
 #workspaces button {
-  color: #fff4d2;
-  padding: 0 4px;
-  margin: 0 3px;
-  min-width: 25px;
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 6px;
+  /* background-color: #181825; */
+  background-color: @color0;
+  color: @foreground;
 }
 
 #workspaces button:hover {
-  background: #d3869b;
+  color: @color0;
+  background-color: @foreground;
 }
 
-#workspaces button.visible,
-#workspaces button.visible:hover,
-#workspaces button.active,
-#workspaces button.active:hover {
-  background: #8ec07c;
+#workspaces button.active {
+  background-color: @color0;
+  color: @color8;
 }
 
 #workspaces button.urgent {
-  background: #ea6962;
+  background-color: @color0;
+  color: @color1;
 }
 
-/* ================================ */
-/*          Module Styles          */
-/* ================================ */
-#window {
-  color: #d3869b;
+/*https://konodioda.com*/
+
+#clock,
+#pulseaudio,
+#custom-logo,
+#custom-power,
+#custom-spotify,
+#custom-notification,
+#cpu,
+#tray,
+#memory,
+#window,
+#mpris {
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 6px;
+  /* background-color: #181825; */
+  background-color: @color0;
 }
 
-#tray {
-  padding: 0 6px;
+#mpris.playing {
+  color: @color15;
 }
 
-#disk {
-  color: #ea6962;
+#mpris.paused {
+  color: @color8;
+}
+
+#custom-sep {
+  padding: 0px;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
 }
 
 #cpu {
-  color: #e78a4e;
+  color: @color14;
 }
 
-#temperature {
-  color: #d8a657;
-}
-
-#temperature.critical {
-  color: #cc241d;
-}
-
-#backlight {
-  color: #f6c657;
-}
-
-#custom-memory {
-  color: #458588;
-}
-
-#pulseaudio {
-  color: #83a598;
-}
-
-#pulseaudio.muted {
-  color: #ea6962;
-}
-
-#battery {
-  color: #689d6a;
-}
-
-#battery.critical {
-  color: #cc241d;
-}
-
-#battery.warning {
-  color: #e78a4e;
+#memory {
+  color: @color13;
 }
 
 #clock {
-  color: #8ec07c;
+  color: @color2;
+}
+
+#clock.simpleclock {
+  color: @color3;
+}
+
+#window {
+  color: @foreground;
+}
+
+#pulseaudio {
+  color: @color4;
+}
+
+#pulseaudio.muted {
+  color: @color8;
+}
+
+#custom-logo {
+  color: @foreground;
+}
+
+tooltip {
+  background-color: @background;
 }
