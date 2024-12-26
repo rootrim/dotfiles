@@ -6,35 +6,35 @@
   font-family: Lexend, "Caskaydia Cove Nerd Font Propo";
   font-size: 16px;
   font-weight: 600;
+  border-radius: 20px;
 }
 
 window#waybar {
   transition-property: background-color;
   transition-duration: 0.5s;
-  background-color: @background;
+  background-color: transparent;
 }
 
 #workspaces button {
   padding: 0.3rem 0.6rem;
   margin: 0.4rem 0.25rem;
-  border-radius: 6px;
   /* background-color: #181825; */
-  background-color: @color0;
+  background-color: @background;
   color: @foreground;
 }
 
 #workspaces button:hover {
-  color: @color0;
+  color: @background;
   background-color: @foreground;
 }
 
 #workspaces button.active {
-  background-color: @color0;
-  color: @color8;
+  background-color: @foreground;
+  color: @background;
 }
 
 #workspaces button.urgent {
-  background-color: @color0;
+  background-color: @background;
   color: @color1;
 }
 
@@ -53,9 +53,8 @@ window#waybar {
 #mpris {
   padding: 0.3rem 0.6rem;
   margin: 0.4rem 0.25rem;
-  border-radius: 6px;
   /* background-color: #181825; */
-  background-color: @color0;
+  background-color: @background;
 }
 
 #mpris.playing {
