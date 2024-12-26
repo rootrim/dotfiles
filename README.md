@@ -23,3 +23,9 @@ Here is some photos of my Arch + Hyprland rice.
 ![Rofi Preview](images/rofiPreview.png)
 
 ![Cool Photo](images/coolPhoto.png)
+
+---
+
+### Special Thanks
+
+[Bruno Anesio](https://github.com/brunoanesio) for this waybar config.
