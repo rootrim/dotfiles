@@ -10,6 +10,7 @@ local options = {
     javascript = { "prettierd" },
     javascriptreact = { "prettierd" },
     json = { "prettierd" },
+    jsonc = { "prettierd" },
     lua = { "stylua" },
     mdx = { "prettierd" },
     markdown = { "prettierd" },

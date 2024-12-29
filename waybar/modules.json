@@ -1,0 +1,27 @@
+{
+  "clock": {
+    "format": "{:%H:%M}" // Saat ve dakika gösterimi
+  },
+
+  "cpu": {
+    "format": "{usage}%" // CPU kullanımı yüzdesi
+  },
+
+  "memory": {
+    "format": "{:used} / {:total} MB" // Kullanılan / Toplam bellek
+  },
+
+  "temperature": {
+    "format": "{temperature}\u00B0C",
+    "thermal-zone": "coretemp" // Sensör adı (lm_sensors ile kontrol edin)
+  },
+
+  "battery": {
+    "format": "{percentage}%" // Pil yüzdesi
+  },
+
+  "mpris": {
+    "player": "spotify", // Çalan uygulama
+    "format": "{artist} - {title}" // Sanatçı ve şarkı adı
+  }
+}
