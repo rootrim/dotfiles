@@ -12,7 +12,7 @@ alias tree="tree -C"
 alias zource="source ~/.zshrc"
 alias la="ls -a"
 alias nv=nvim
-alias yay="cowsay -f kitty \"You should use paru, you sussy baka!\" | lolcat"
+alias yay="cowsay -f kitty \"You should use paru, you sussy baka!\" | lolcat "
 alias dotf="cd ~/.dotfiles"
 alias pytrim="cd pytrim"
 alias wright="cd wright"
@@ -97,8 +97,8 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # SSH agent
-(eval "$(ssh-agent -s)" &)
-(ssh-add ~/.ssh/id_ed25519 &)
+# (eval "$(ssh-agent -s)" &)
+# (ssh-add ~/.ssh/id_ed25519 &)
 
 # Pywal colors
 source ~/.cache/wal/colors-tty.sh

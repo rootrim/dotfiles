@@ -12,7 +12,7 @@ local servers = {
   "cssls",
   "clangd",
   "pylsp",
-  "ruff_lsp",
+  "ruff",
   "rust_analyzer",
   "hls",
   "hyprls",
