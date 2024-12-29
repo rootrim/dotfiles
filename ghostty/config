@@ -1,0 +1,11 @@
+theme = GruvboxDark
+font-family = "CaskaydiaCove Nerd Font Propo"
+font-size = 13
+
+shell-integration = zsh
+
+gtk-single-instance = false
+
+gtk-titlebar = false
+
+background-opacity = 1

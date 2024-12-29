@@ -3,7 +3,6 @@
 
 # Some variables
 EDITOR=nvim
-
 # Aliasses
 
 alias ls="ls --color"
@@ -96,6 +95,14 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# SSH agent
+(eval "$(ssh-agent -s)" &)
+(ssh-add ~/.ssh/id_ed25519 &)
+
+# Pywal colors
+source ~/.cache/wal/colors-tty.sh
+(cat ~/.cache/wal/sequences &)
 
 source /home/rootrim/.config/broot/launcher/bash/br
 

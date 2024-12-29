@@ -1,7 +1,7 @@
 return {
   {
     "folke/todo-comments.nvim",
-    -- FIX Please
+    -- FIX: Please
     lazy = false,
     opts = {},
   },
