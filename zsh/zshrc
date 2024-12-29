@@ -101,8 +101,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # (ssh-add ~/.ssh/id_ed25519 &)
 
 # Pywal colors
-source ~/.cache/wal/colors-tty.sh
-(cat ~/.cache/wal/sequences &)
+# source ~/.cache/wal/colors-tty.sh
+# (cat ~/.cache/wal/sequences &)
 
 source /home/rootrim/.config/broot/launcher/bash/br
 

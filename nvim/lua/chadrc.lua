@@ -3,9 +3,9 @@ local M = {}
 
 M = {
   base46 = {
-    theme = "chadwal",
+    theme = "gruvbox",
     transparency = false,
-    theme_toggle = { "chadwal", "chadwal" },
+    theme_toggle = { "chadwal", "gruvbox" },
   },
 
   nvdash = {
