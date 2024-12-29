@@ -1,0 +1,3 @@
+[submodule "nvim/pywal"]
+	path = nvim/pywal
+	url = https://github.com/NvChad/pywal
