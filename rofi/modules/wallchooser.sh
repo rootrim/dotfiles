@@ -23,5 +23,5 @@ SELECTED_PATH="$TARGET_DIR/$SELECTED_FILE"
 
 echo $SELECTED_PATH
 
-wal -i $SELECTED_PATH -n
+# wal -i $SELECTED_PATH -n
 swww img $SELECTED_PATH --transition-type=outer --transition-fps=120 --transition-duration=1
