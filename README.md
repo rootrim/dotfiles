@@ -16,12 +16,12 @@ Have a good look!
 
 Here is some photos of my Arch + Hyprland rice.
 
-![Taking Notes](images/noteTaking.png)
+![Taking Notes](images/noteTakingV2.png)
 
-![Listening Songs](images/listeningSongs.png)
+![Listening Songs](images/listeningSongsV2.png)
 
-![Rofi Preview](images/rofiPreview.png)
+![Rofi Preview](images/meAndMyRofiV2.png)
 
-![Cool Photo](images/coolPhoto.png)
+![Cool Photo](images/coolPhotoV2.png)
 
 ---
