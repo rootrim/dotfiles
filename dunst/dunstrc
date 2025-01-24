@@ -1,23 +1,24 @@
 [global]
-font = CaskaydiaCoveNF:size=13
-corner_radius = 10
-background = "#2F1E2E"
-foreground = "#cdd6f4"
-frame_width = 2
-frame_color = "#cba6f7"
-origin = top-center
-horizontal_padding = 10
-width = (0, 500)
-offset = 0x10
+    font = Monospace 10
+    format = "<b>%s</b>\n%b"
+    background = #282828
+    foreground = #ebdbb2
+    frame_color = #458588
 
 [urgency_low]
-foreground = "#6D6875"
-frame_color = "#6D6875"
+    timeout = 10
+    background = #282828
+    foreground = #a89984
+    frame_color = #504945
 
 [urgency_normal]
-foreground = "#cba6f7"
-frame_color = "#cba6f7"
+    timeout = 10
+    background = #282828
+    foreground = #ebdbb2
+    frame_color = #458588
 
 [urgency_critical]
-foreground = "#FFA737"
-frame_color = "#FFA737"
+    timeout = 0
+    background = #cc241d
+    foreground = #fbf1c7
+    frame_color = #fb4934

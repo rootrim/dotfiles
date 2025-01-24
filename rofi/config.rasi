@@ -9,7 +9,7 @@
     g-padding: 8px;
     hl-color: @fg-color;
     hlt-color: @b-color;
-    alt-color: #3c3836; 
+    alt-color: @b-color; 
     wbg-color: @b-color;
     w-border: 0px solid;
     w-border-color: transparent;

@@ -1,5 +1,5 @@
 theme = GruvboxDark
-font-family = "CaskaydiaCove Nerd Font Propo"
+font-family = "CaskaydiaCove Nerd Font"
 font-size = 13
 
 shell-integration = zsh
