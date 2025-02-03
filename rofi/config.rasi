@@ -101,3 +101,7 @@ message {
     background-color: red;
     border: 0px solid;
 }
+
+//@theme "/usr/share/rofi/themes/fullscreen-preview.rasi"
+
+@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"

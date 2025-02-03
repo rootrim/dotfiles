@@ -24,6 +24,8 @@ alias fatihfetch="neofetch --backend kitty --source dotfiles/xfetch/fetchimgs/Fa
 alias kendirlifetch="neofetch --backend kitty --source ~/dotfiles/xfetch/fetchimgs/kendirli.png"
 alias enesfetch="neofetch --backend kitty --source ~/dotfiles/xfetch/fetchimgs/enesoruc.png"
 alias asciifetch="neofetch --source ~/.config/neofetch/aperture.txt --ascii"
+alias python3='~/.venv/bin/python3'
+alias pip3='~/.venv/bin/pip3'
 
 # Plugins
 
@@ -111,3 +113,4 @@ export LD_LIBRARY_PATH=/home/rootrim/.local/lib/arch-mojo:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home/rootrim/.local/lib/arch-mojo:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home/rootrim/.local/lib/arch-mojo:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home/rootrim/.local/lib/arch-mojo:$LD_LIBRARY_PATH
+. /opt/asdf-vm/asdf.sh
