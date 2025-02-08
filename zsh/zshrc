@@ -113,4 +113,6 @@ export LD_LIBRARY_PATH=/home/rootrim/.local/lib/arch-mojo:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home/rootrim/.local/lib/arch-mojo:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home/rootrim/.local/lib/arch-mojo:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home/rootrim/.local/lib/arch-mojo:$LD_LIBRARY_PATH
-. /opt/asdf-vm/asdf.sh
+export ASDF_DATA_DIR="/home/rootrim/.asdf"
+export PATH="$ASDF_DATA_DIR/shims:$PATH"
+
