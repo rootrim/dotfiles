@@ -1,4 +1,4 @@
-zsh/plugin_files
+# zsh/plugin_files
 newsboat
 __pycache__/
 *.pyc
