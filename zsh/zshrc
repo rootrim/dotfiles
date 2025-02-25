@@ -2,7 +2,8 @@
 [ "$(tty)" = "/dev/tty1" ] && Hyprland
 
 # Some variables
-EDITOR=nvim
+export EDITOR=nvim
+
 # Aliasses
 
 alias ls="ls --color"
@@ -26,6 +27,7 @@ alias enesfetch="neofetch --backend kitty --source ~/dotfiles/xfetch/fetchimgs/e
 alias asciifetch="neofetch --source ~/.config/neofetch/aperture.txt --ascii"
 alias python3='~/.venv/bin/python3'
 alias pip3='~/.venv/bin/pip3'
+alias lg="lazygit"
 
 # Plugins
 
